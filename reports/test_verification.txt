@@ -1,0 +1,17 @@
+test_column_order_invariant (test_pipeline.PipelineTests.test_column_order_invariant) ... ok
+test_duplicate_csv_header_rejected (test_pipeline.PipelineTests.test_duplicate_csv_header_rejected) ... ok
+test_explanation_consistent (test_pipeline.PipelineTests.test_explanation_consistent) ... ok
+test_labels_ids_ports_never_change_score (test_pipeline.PipelineTests.test_labels_ids_ports_never_change_score) ... ok
+test_missing_feature_rejected (test_pipeline.PipelineTests.test_missing_feature_rejected) ... ok
+test_nonfinite_and_negative_rejected (test_pipeline.PipelineTests.test_nonfinite_and_negative_rejected) ... ok
+test_prediction_contract (test_pipeline.PipelineTests.test_prediction_contract) ... ok
+test_report_matches_saved_test_predictions (test_pipeline.PipelineTests.test_report_matches_saved_test_predictions) ... ok
+test_row_limit_and_empty_rejected (test_pipeline.PipelineTests.test_row_limit_and_empty_rejected) ... ok
+test_split_hashes_unique (test_pipeline.PipelineTests.test_split_hashes_unique) ... ok
+test_threshold_monotonicity (test_pipeline.PipelineTests.test_threshold_monotonicity) ... ok
+test_unknown_category_flagged (test_pipeline.PipelineTests.test_unknown_category_flagged) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.564s
+
+OK

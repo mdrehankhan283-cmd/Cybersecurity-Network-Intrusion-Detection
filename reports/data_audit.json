@@ -1,0 +1,78 @@
+{
+  "raw_rows": 123117,
+  "model_features": 81,
+  "excluded_columns": [
+    "Attack_type",
+    "Unnamed: 0",
+    "id.orig_p",
+    "id.resp_p"
+  ],
+  "conflicting_hashes": 10,
+  "conflict_rows_removed": 611,
+  "duplicate_rows_removed": 104244,
+  "unique_rows_used": 18262,
+  "seed": 42,
+  "split_method": "60/20/20 stratified by collapsed family after feature-vector deduplication",
+  "overlapping_feature_hashes": 0,
+  "raw_class_counts": {
+    "DOS_SYN_Hping": 94659,
+    "Thing_Speak": 8108,
+    "ARP_poisioning": 7750,
+    "MQTT_Publish": 4146,
+    "NMAP_UDP_SCAN": 2590,
+    "NMAP_XMAS_TREE_SCAN": 2010,
+    "NMAP_OS_DETECTION": 2000,
+    "NMAP_TCP_scan": 1002,
+    "DDOS_Slowloris": 534,
+    "Wipro_bulb": 253,
+    "Metasploit_Brute_Force_SSH": 37,
+    "NMAP_FIN_SCAN": 28
+  },
+  "splits": {
+    "train": {
+      "n": 10957,
+      "families": {
+        "Benign": 7171,
+        "ARP_poisioning": 3174,
+        "DDOS_Slowloris": 319,
+        "NMAP_UDP_SCAN": 115,
+        "NMAP_XMAS_TREE_SCAN": 48,
+        "NMAP_OS_DETECTION": 45,
+        "DOS_SYN_Hping": 34,
+        "NMAP_TCP_scan": 27,
+        "Metasploit_Brute_Force_SSH": 21,
+        "NMAP_FIN_SCAN": 3
+      }
+    },
+    "validation": {
+      "n": 3652,
+      "families": {
+        "Benign": 2390,
+        "ARP_poisioning": 1058,
+        "DDOS_Slowloris": 106,
+        "NMAP_UDP_SCAN": 38,
+        "NMAP_XMAS_TREE_SCAN": 16,
+        "NMAP_OS_DETECTION": 15,
+        "DOS_SYN_Hping": 12,
+        "NMAP_TCP_scan": 9,
+        "Metasploit_Brute_Force_SSH": 7,
+        "NMAP_FIN_SCAN": 1
+      }
+    },
+    "test": {
+      "n": 3653,
+      "families": {
+        "Benign": 2391,
+        "ARP_poisioning": 1058,
+        "DDOS_Slowloris": 107,
+        "NMAP_UDP_SCAN": 39,
+        "NMAP_XMAS_TREE_SCAN": 16,
+        "NMAP_OS_DETECTION": 15,
+        "DOS_SYN_Hping": 11,
+        "NMAP_TCP_scan": 8,
+        "Metasploit_Brute_Force_SSH": 7,
+        "NMAP_FIN_SCAN": 1
+      }
+    }
+  }
+}

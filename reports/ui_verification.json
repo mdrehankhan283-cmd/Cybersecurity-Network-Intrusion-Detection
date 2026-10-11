@@ -1,0 +1,18 @@
+{
+  "environment": "jsdom with real localhost API; not a browser layout test",
+  "checks": [
+    "initial connection",
+    "158-flow demo",
+    "pagination",
+    "15-feature sensitivity dialog",
+    "evaluation tab and 3 model rows",
+    "10 family evidence rows",
+    "threshold rescore and reset",
+    "alert filter",
+    "CSV export handler",
+    "bad upload rejects and clears stale rows"
+  ],
+  "passed": true,
+  "js_errors": [],
+  "browser_visual_qa": "Not run: Chromium binary download unavailable in build environment"
+}

@@ -1,0 +1,247 @@
+{
+  "selected_model": "Random forest",
+  "threshold": 0.5317481696851565,
+  "validation": {
+    "Majority baseline": {
+      "average_precision": 0.34556407447973714,
+      "roc_auc": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0,
+      "balanced_accuracy": 0.5,
+      "false_positive_rate": 0.0,
+      "threshold": 1.0,
+      "tn": 2390,
+      "fp": 0,
+      "fn": 1262,
+      "tp": 0,
+      "n": 3652,
+      "fpr_target_met": true,
+      "fit_seconds": 0.846
+    },
+    "Logistic regression": {
+      "average_precision": 0.9813292174335695,
+      "roc_auc": 0.9951853006120324,
+      "precision": 0.9810834049871023,
+      "recall": 0.904120443740095,
+      "f1": 0.9410309278350516,
+      "f2": 0.9185316374174851,
+      "balanced_accuracy": 0.9474577114097964,
+      "false_positive_rate": 0.009205020920502092,
+      "threshold": 0.8891295938553737,
+      "tn": 2368,
+      "fp": 22,
+      "fn": 121,
+      "tp": 1141,
+      "n": 3652,
+      "fpr_target_met": true,
+      "fit_seconds": 34.023
+    },
+    "Random forest": {
+      "average_precision": 0.9992287984066329,
+      "roc_auc": 0.9996001564893342,
+      "precision": 0.981974921630094,
+      "recall": 0.9928684627575277,
+      "f1": 0.987391646966115,
+      "f2": 0.9906704617330804,
+      "balanced_accuracy": 0.9916225158975923,
+      "false_positive_rate": 0.009623430962343096,
+      "threshold": 0.5317481696851565,
+      "tn": 2367,
+      "fp": 23,
+      "fn": 9,
+      "tp": 1253,
+      "n": 3652,
+      "fpr_target_met": true,
+      "fit_seconds": 8.464
+    }
+  },
+  "test": {
+    "Majority baseline": {
+      "average_precision": 0.345469477142075,
+      "roc_auc": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "f2": 0.0,
+      "balanced_accuracy": 0.5,
+      "false_positive_rate": 0.0,
+      "threshold": 1.0,
+      "tn": 2391,
+      "fp": 0,
+      "fn": 1262,
+      "tp": 0,
+      "n": 3653
+    },
+    "Logistic regression": {
+      "average_precision": 0.9798118610423655,
+      "roc_auc": 0.9952048788344565,
+      "precision": 0.98,
+      "recall": 0.9318541996830428,
+      "f1": 0.9553208773354996,
+      "f2": 0.941101152368758,
+      "balanced_accuracy": 0.9609082792643571,
+      "false_positive_rate": 0.010037641154328732,
+      "threshold": 0.8891295938553737,
+      "tn": 2367,
+      "fp": 24,
+      "fn": 86,
+      "tp": 1176,
+      "n": 3653
+    },
+    "Random forest": {
+      "average_precision": 0.9990134773842219,
+      "roc_auc": 0.9994929480003261,
+      "precision": 0.9766536964980544,
+      "recall": 0.9944532488114105,
+      "f1": 0.9854731056144483,
+      "f2": 0.9908416232433286,
+      "balanced_accuracy": 0.9909530986842499,
+      "false_positive_rate": 0.012547051442910916,
+      "threshold": 0.5317481696851565,
+      "tn": 2361,
+      "fp": 30,
+      "fn": 7,
+      "tp": 1255,
+      "n": 3653
+    }
+  },
+  "per_family_detection": {
+    "ARP_poisioning": {
+      "n": 1058,
+      "alert_rate": 0.995274102079395
+    },
+    "Benign": {
+      "n": 2391,
+      "alert_rate": 0.012547051442910916
+    },
+    "DDOS_Slowloris": {
+      "n": 107,
+      "alert_rate": 1.0
+    },
+    "DOS_SYN_Hping": {
+      "n": 11,
+      "alert_rate": 1.0
+    },
+    "Metasploit_Brute_Force_SSH": {
+      "n": 7,
+      "alert_rate": 1.0
+    },
+    "NMAP_FIN_SCAN": {
+      "n": 1,
+      "alert_rate": 1.0
+    },
+    "NMAP_OS_DETECTION": {
+      "n": 15,
+      "alert_rate": 1.0
+    },
+    "NMAP_TCP_scan": {
+      "n": 8,
+      "alert_rate": 1.0
+    },
+    "NMAP_UDP_SCAN": {
+      "n": 39,
+      "alert_rate": 0.9487179487179487
+    },
+    "NMAP_XMAS_TREE_SCAN": {
+      "n": 16,
+      "alert_rate": 1.0
+    }
+  },
+  "family_classification": {
+    "ARP_poisioning": {
+      "precision": 0.974050046339203,
+      "recall": 0.9933837429111532,
+      "f1-score": 0.9836218998596162,
+      "support": 1058.0
+    },
+    "Benign": {
+      "precision": 0.9966287399915719,
+      "recall": 0.9891258887494772,
+      "f1-score": 0.9928631402183039,
+      "support": 2391.0
+    },
+    "DDOS_Slowloris": {
+      "precision": 0.9532710280373832,
+      "recall": 0.9532710280373832,
+      "f1-score": 0.9532710280373832,
+      "support": 107.0
+    },
+    "DOS_SYN_Hping": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 11.0
+    },
+    "Metasploit_Brute_Force_SSH": {
+      "precision": 1.0,
+      "recall": 0.8571428571428571,
+      "f1-score": 0.9230769230769231,
+      "support": 7.0
+    },
+    "NMAP_FIN_SCAN": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 1.0
+    },
+    "NMAP_OS_DETECTION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 15.0
+    },
+    "NMAP_TCP_scan": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 8.0
+    },
+    "NMAP_UDP_SCAN": {
+      "precision": 0.7435897435897436,
+      "recall": 0.7435897435897436,
+      "f1-score": 0.7435897435897436,
+      "support": 39.0
+    },
+    "NMAP_XMAS_TREE_SCAN": {
+      "precision": 1.0,
+      "recall": 0.9375,
+      "f1-score": 0.967741935483871,
+      "support": 16.0
+    },
+    "accuracy": 0.9860388721598686,
+    "macro avg": {
+      "precision": 0.8667539557957902,
+      "recall": 0.8474013260430613,
+      "f1-score": 0.8564164670265841,
+      "support": 3653.0
+    },
+    "weighted avg": {
+      "precision": 0.9858976913076171,
+      "recall": 0.9860388721598686,
+      "f1-score": 0.9859165474247794,
+      "support": 3653.0
+    }
+  },
+  "bootstrap_95_percent": {
+    "average_precision": [
+      0.9983591699600849,
+      0.9994994138134611
+    ],
+    "recall": [
+      0.9894728042690207,
+      0.9983958821409263
+    ],
+    "false_positive_rate": [
+      0.008814178622505553,
+      0.016994227196395508
+    ]
+  },
+  "notes": [
+    "Test never used for training, model choice or threshold choice.",
+    "Bootstrap intervals assume independent held-out rows; capture correlation is not represented.",
+    "Random split cannot establish future-time, unseen-device or external-network generalization.",
+    "Scores are uncalibrated model scores, not incident probabilities."
+  ]
+}

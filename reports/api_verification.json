@@ -1,0 +1,9 @@
+{
+  "health": "passed",
+  "sample_rows": 158,
+  "prediction": "passed",
+  "explanation_features": 15,
+  "invalid_schema_threshold_duplicate_empty": "passed",
+  "cross_origin_rejection": "passed",
+  "content_type_rejection": "passed"
+}
