@@ -99,7 +99,7 @@ def main():
     Handler.meta = {name: json.loads((ROOT / f'reports/{file}').read_text()) for name, file in
                     [('metrics', 'metrics.json'), ('audit', 'data_audit.json'), ('schema', 'schema.json')]}
     Handler.meta['importance'] = pd.read_csv(ROOT / 'reports/permutation_importance.csv').head(12).to_dict('records')
-    ThreadingHTTPServer(('0.0.0.0', args.port), Handler)
+    server = ThreadingHTTPServer(('0.0.0.0', args.port), Handler)
     server.daemon_threads = True
     print(f'NetGuard ready: http://127.0.0.1:{args.port}  |  Ctrl+C to stop', flush=True)
     if not args.no_browser:
