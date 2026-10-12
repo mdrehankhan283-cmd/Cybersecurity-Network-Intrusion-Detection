@@ -64,8 +64,11 @@ class Handler(BaseHTTPRequestHandler):
         if self.headers.get('Content-Type', '').split(';')[0] != 'application/json':
             return self.send(415, {'error': 'Content-Type must be application/json.'})
         origin = self.headers.get('Origin')
-        if origin and origin != 'http://' + self.headers.get('Host', ''):
-            return self.send(403, {'error': 'Cross-origin requests are not accepted.'})
+        if origin:
+            parsed_origin = urlparse(origin)
+            if (parsed_origin.scheme not in ('http', 'https')
+                    or parsed_origin.netloc.lower() != self.headers.get('Host', '').lower()):
+                 return self.send(403, {'error': 'Cross-origin requests are not accepted.'})
         try:
             length = int(self.headers.get('Content-Length', '0'))
             if not 0 < length <= MAX_BODY:
