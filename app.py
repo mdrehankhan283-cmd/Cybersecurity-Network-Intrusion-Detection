@@ -5,6 +5,7 @@ import io
 import json
 import threading
 import webbrowser
+import os
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse
 import pandas as pd
@@ -44,7 +45,7 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         path = urlparse(self.path).path
         if path == '/':
-            return self.send(200, (ROOT / 'web/index.html').read_bytes(), 'text/html; charset=utf-8')
+            return self.send(200, (ROOT / 'index.html').read_bytes(), 'text/html; charset=utf-8')
         if path == '/api/health':
             return self.send(200, {'status': 'ok', 'model': self.bundle['selected_model']})
         if path == '/api/meta':
@@ -91,14 +92,14 @@ class Handler(BaseHTTPRequestHandler):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--port', type=int, default=8501)
+    parser.add_argument('--port', type=int, default=int(os.environ.get('PORT', '8501')))
     parser.add_argument('--no-browser', action='store_true')
     args = parser.parse_args()
     Handler.bundle = load_bundle()
     Handler.meta = {name: json.loads((ROOT / f'reports/{file}').read_text()) for name, file in
                     [('metrics', 'metrics.json'), ('audit', 'data_audit.json'), ('schema', 'schema.json')]}
     Handler.meta['importance'] = pd.read_csv(ROOT / 'reports/permutation_importance.csv').head(12).to_dict('records')
-    server = ThreadingHTTPServer(('127.0.0.1', args.port), Handler)
+    ThreadingHTTPServer(('0.0.0.0', args.port), Handler)
     server.daemon_threads = True
     print(f'NetGuard ready: http://127.0.0.1:{args.port}  |  Ctrl+C to stop', flush=True)
     if not args.no_browser:
